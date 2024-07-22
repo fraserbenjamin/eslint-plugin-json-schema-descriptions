@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-json-schema-descriptions",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "ESLint Plugin to require descriptions on JSON Schema Properties",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -49,6 +49,6 @@
     "jsonc-eslint-parser": "^2.4.0"
   },
   "peerDependencies": {
-    "eslint": "^7.0.0"
+    "eslint": ">=7.0.0"
   }
 }

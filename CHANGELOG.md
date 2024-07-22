@@ -1,6 +1,12 @@
 # CHANGELOG.md
 
-## 1.2.0 (2024-07-22)
+## 1.1.1 (2024-07-22)
+
+Fix:
+
+  - Updated package.json to support new versions of ESLint
+
+## 1.1.0 (2024-07-22)
 
 Features:
 
