@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Device Plugin",
+  "description": "Information regarding a device",
+  "type": "object",
+  "$id": "https://com.example/schemas/Device?v=1.0.0",
+  "properties": {
+    "schema": {
+      "type": "string",
+      "const": "https://com.example/schemas/Device?v=1.0.0",
+      "format": "uri"
+    },
+    "screen": {
+      "type": "object",
+      "description": "Physical screen of the device",
+      "properties": {
+        "width": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        }
+      },
+      "required": ["width", "height"],
+      "additionalProperties": false
+    },
+    "uptime": {
+      "type": "number",
+      "description": "Time since last reboot in seconds"
+    }
+  },
+  "required": ["schema", "screen"],
+  "additionalProperties": false
+}

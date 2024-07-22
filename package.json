@@ -1,0 +1,27 @@
+{
+  "name": "eslint-plugin-json-schema-descriptions",
+  "version": "1.0.0",
+  "description": "ESLint Plugin to require descriptions on JSON Schema Properties",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsup-node src/index.ts --format esm --out-dir dist --onSuccess 'npm run trial'",
+    "test": "eslint ./test --config ./test/eslint.config.json.js",
+    "lint": "eslint ."
+  },
+  "author": "Fraser Benjamin",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "@types/eslint": "^8.56.10",
+    "eslint": "^9.7.0",
+    "tsup": "^8.2.2",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.0.0-alpha.49"
+  },
+  "dependencies": {
+    "eslint-compat-utils": "^0.5.1",
+    "jsonc-eslint-parser": "^2.4.0"
+  }
+}
