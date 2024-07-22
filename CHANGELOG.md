@@ -1,5 +1,13 @@
 # CHANGELOG.md
 
+## 1.2.0 (2024-07-22)
+
+Features:
+
+  - Added recommended export
+  - Updated README
+  - Changed build tooling to tsc
+
 ## 1.0.1 (2024-07-22)
 
 Features:

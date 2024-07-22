@@ -1,21 +1,25 @@
 {
   "name": "eslint-plugin-json-schema-descriptions",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "ESLint Plugin to require descriptions on JSON Schema Properties",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "dev": "tsup-node src/index.ts --format esm,cjs --dts --out-dir dist --onSuccess 'npm run test'",
-    "build": "tsup src/index.ts --format esm,cjs --dts --out-dir dist",
+    "dev": "npm run build && npm run test",
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf dist",
     "test": "eslint ./test --config ./test/eslint.config.json.js",
     "lint": "eslint ."
   },
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
+    },
+    "./recommended": {
+      "import": "./dist/recommended/index.js",
+      "types": "./dist/recommended/index.d.ts"
     }
   },
   "author": "Fraser Benjamin",
@@ -37,12 +41,14 @@
     "@eslint/js": "^9.7.0",
     "@types/eslint": "^8.56.10",
     "eslint": "^9.7.0",
-    "tsup": "^8.2.2",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.0-alpha.49"
   },
   "dependencies": {
     "eslint-compat-utils": "^0.5.1",
     "jsonc-eslint-parser": "^2.4.0"
+  },
+  "peerDependencies": {
+    "eslint": "^7.0.0"
   }
 }
